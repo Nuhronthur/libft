@@ -7,7 +7,7 @@ memccpy
 memmove
 memchr
 memcmp
-strlen
+strlen-----------------------OK
 isalpha----------------------OK
 isdigit-----------------------OK
 isalnum
