@@ -1,6 +1,6 @@
 LIBFT TAF
 
-memset
+memset---------------------OK
 bzero
 memcpy
 memccpy

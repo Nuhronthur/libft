@@ -1,20 +1,32 @@
-size_t ft_strlcpy(char *dst, const char *src, size_t t)
-{
-    int i;
-    size_t l;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jovella <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/05 10:53:00 by jovella           #+#    #+#             */
+/*   Updated: 2021/04/05 10:58:12 by jovella          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    i = 0;
-    t = 0;
-    while(src[l] != '\0')
-        l++;
-    if (t > 0)
-    {
-        while(i < t && src[i] != '\0')
-        {
-            dst[i] = src[i];
-            i++;
-        }
-    }
-    dst[i] = '\0';
-    return (i);
+size_t	ft_strlcpy(char *dst, const char *src, size_t t)
+{
+	int		i;
+	size_t	l;
+
+	i = 0;
+	t = 0;
+	while (src[l] != '\0')
+		l++;
+	if (t > 0)
+	{
+		while (i < t && src[i] != '\0')
+		{
+			dst[i] = src[i];
+			i++;
+		}
+	}
+	dst[i] = '\0';
+	return (i);
 }
