@@ -1,7 +1,7 @@
 LIBFT TAF
 
 memset---------------------OK
-bzero
+bzero----------------------OK
 memcpy
 memccpy
 memmove

@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jovella <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/05 11:02:01 by jovella           #+#    #+#             */
-/*   Updated: 2021/04/05 13:54:02 by jovella          ###   ########.fr       */
+/*   Created: 2021/04/05 13:56:11 by jovella           #+#    #+#             */
+/*   Updated: 2021/04/05 14:42:21 by jovella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char	*str;
+	int i;
 
-	str = s;
-	while (n)
+	i = 0;
+	while(n)
 	{
-		*str = (size_t)0;
-		str++;
-		n--;
 	}
-	return (s);
+	return (dest);
 }
