@@ -1,28 +1,28 @@
 LIBFT TAF
 
-memset---------------------OK
-bzero----------------------OK
-memcpy
-memccpy
+Makefile
+memset---------------------OK-----NT
+bzero----------------------OK-----NT
+memcpy---------------------OK-----NT
+memccpy--------------------OK-----NT
 memmove
 memchr
 memcmp
-strlen---------------------OK
-isalpha--------------------OK
-isdigit--------------------OK
+strlen---------------------OK-----NT
+isalpha--------------------OK-----NT
+isdigit--------------------OK-----NT
 isalnum
-isascii--------------------OK
-isprint--------------------OK
-toupper--------------------OK
-tolower--------------------OK
-strchr---------------------OK
-strrchr--------------------OK
-strncmp--------------------OK
-strlcpy--------------------OK
+isascii--------------------OK-----NT
+isprint--------------------OK-----NT
+toupper--------------------OK-----NT
+tolower--------------------OK-----NT
+strchr---------------------OK-----NT
+strrchr--------------------OK-----NT
+strncmp--------------------OK-----NT
+strlcpy--------------------OK-----NT
 strlcat
 strnstr 
-atoi-----------------------OK
+atoi-----------------------OK-----NT
 
 calloc
 strdup
-

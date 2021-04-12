@@ -10,13 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t l)
 {
 	int i;
+	int cpt;
+	char	*s;
 
+	s = (char *)dest;
 	i = 0;
-	while(n)
+	cpt = 0;
+	while(cpt < l)
 	{
+		(char *)s[i] = (char *)src[i];
+		i++;
+		l--;
+		cpt++;
 	}
 	return (dest);
 }
