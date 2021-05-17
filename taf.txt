@@ -6,7 +6,7 @@ bzero----------------------OK-----NT
 memcpy---------------------OK-----NT
 memccpy--------------------OK-----NT
 memmove--------------------OK-----NT
-memchr
+memchr---------------------OK-----NT
 memcmp
 strlen---------------------OK-----NT
 isalpha--------------------OK-----NT
