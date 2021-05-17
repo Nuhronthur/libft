@@ -5,7 +5,7 @@ memset---------------------OK-----NT
 bzero----------------------OK-----NT
 memcpy---------------------OK-----NT
 memccpy--------------------OK-----NT
-memmove
+memmove--------------------OK-----NT
 memchr
 memcmp
 strlen---------------------OK-----NT
