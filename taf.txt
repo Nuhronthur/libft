@@ -7,7 +7,7 @@ memcpy---------------------OK-----NT
 memccpy--------------------OK-----NT
 memmove--------------------OK-----NT
 memchr---------------------OK-----NT
-memcmp
+memcmp---------------------OK-----NT
 strlen---------------------OK-----NT
 isalpha--------------------OK-----NT
 isdigit--------------------OK-----NT
@@ -21,7 +21,7 @@ strrchr--------------------OK-----NT
 strncmp--------------------OK-----NT
 strlcpy--------------------OK-----NT
 strlcat
-strnstr 
+strnstr
 atoi-----------------------OK-----NT
 
 calloc
