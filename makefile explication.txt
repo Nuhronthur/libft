@@ -1,4 +1,4 @@
-NAME = libft.a #Création d'un fichier archive(pouvant contenir plusieurs fichier objets(.o))
+NAME = libft.a #Création d'une variable NAME qui porte le nom du dossier archive(pouvant contenir plusieurs fichier objets(.o))
 
 
 OBJ_PATH = ./objs/ #OBJ_PATH va prendre la valeur ./objs/ 
@@ -11,38 +11,37 @@ OBJ_NAME = $(SRC_NAME:.c=.o) #On convertit tout les fichier en .c en fichier obj
 
 # Files
 
-OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME)) #Tout les fichier qui sont OBJ_NAME
+OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME)) #Tout les fichier qui sont attribué dans OBJ_NAME se voient ajouté devant leur nom de fichier OBJ_PATH (./objs/)
 
-# Flags
 
-CC = gcc $(CFLAGS)
+CFLAGS = -Wall -Wextra -Werror 	#On crée la variable CFLAGS contenant -Wall -Wextra -Werror afin de pouvoir compiler avec ces flags
 
-CFLAGS = -Wall -Wextra -Werror
+CC = gcc $(CFLAGS) 		#On crée la variable CC avec le compilateur gcc afin de pouvoir compilé quand on appliquera les règles du makefile
 
 # Rules
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@echo "\033[34mCreation of $(NAME) ...\033[0m"
-	@ar rc $(NAME) $(OBJ)
-	@ranlib $(NAME)
-	@echo "\033[32m$(NAME) created\n\033[0m"
+	@echo "Creation of $(NAME)... \n" 	#Envoi du message annonçant le début de la création du dossier archive
+	@ar rc $(NAME) $(OBJ) 			#On crée une archive (c) nommée NAME(libft.a) et archivé (r) https://linux.die.net/man/1/ar
+	@ranlib $(NAME) 			#On indexe l'archive grace a ranlib
+	@echo "(NAME) created\n" 		#Message pour indiquer que l'archive fut faite
 
 $(OBJ_PATH)%.o: %.c
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
 	@$(CC) -o $@ -c $<
 
 clean:
-	@echo "\033[33mRemoval of .o files of $(NAME) ...\033[0m"
-	@rm -f $(OBJ)
-	@rmdir $(OBJ_PATH) 2> /dev/null || true
-	@echo "\033[31mFiles .o deleted\n\033[0m"
+	@echo "Removal of .o files of $(NAME) ..." 	#Envoi du message annonçant la suppression des fichiers archives
+	@rm -f $(OBJ) Tous les fichiers 		#Suppression forcée(-f) de tous les fichiers contenus dans OBJ
+	@rmdir $(OBJ_PATH) 2> /dev/null || true		
+	@echo "Files .o deleted\n"			#Envoi du message annonçant que la suppression est effectuée
 
 fclean: clean
-	@echo "\033[33mRemoval of $(NAME)...\033[0m"
-	@rm -f $(NAME)
-	@echo "\033[31mBinary $(NAME) deleted\n\033[0m"
+	@echo "Removal of $(NAME)..."			#Envoi du message annonçant la supression du fichier NAME(libft.a)
+	@rm -f $(NAME)					#Suppression forcée(-f) du dossier NAME(libft.a)
+	@echo "Binary $(NAME) deleted\n"		#Envoi du message annonçant que la suppression est faite
 
 re: fclean all
 
