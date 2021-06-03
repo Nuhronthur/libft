@@ -6,13 +6,13 @@
 /*   By: jovella <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 10:53:00 by jovella           #+#    #+#             */
-/*   Updated: 2021/04/05 10:58:12 by jovella          ###   ########.fr       */
+/*   Updated: 2021/06/03 11:37:20 by jovella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t t)
 {
-	int		i;
+	size_t	i;
 	size_t	l;
 
 	i = 0;
@@ -21,12 +21,12 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t t)
 		l++;
 	if (t > 0)
 	{
-		while (i < t && src[i] != '\0')
+		while (i < (t - 1) && src[i] != '\0')
 		{
 			dst[i] = src[i];
 			i++;
 		}
 	}
 	dst[i] = '\0';
-	return (i);
+	return (l);
 }
