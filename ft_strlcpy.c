@@ -29,8 +29,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t t)
 	}
 	dst[i] = '\0';
 	return (l);
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f943e21ad8cc4f0d812b88c8b38e66e2028f688e

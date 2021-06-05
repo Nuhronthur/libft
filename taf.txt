@@ -20,8 +20,8 @@ strchr---------------------OK-----NT
 strrchr--------------------OK-----NT
 strncmp--------------------OK-----NT
 strlcpy--------------------OK-----NT
-strlcat
-strnstr
+strlcat--------------------OK-----NT
+strnstr--------------------OK-----NT
 atoi-----------------------OK-----NT
 
 calloc
