@@ -25,4 +25,18 @@ strnstr--------------------OK-----NT
 atoi-----------------------OK-----NT
 
 calloc---------------------OK-----NT
-strdup
+strdup---------------------OK-----NT
+
+Partie 2
+
+substr
+strjoin
+strtrim
+split
+itoa
+strmapi
+putchar_fd
+putstr_fd
+putendl_fd
+putnbr_fd
+
