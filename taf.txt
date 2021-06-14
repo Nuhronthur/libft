@@ -1,6 +1,7 @@
 LIBFT TAF
 
 Makefile
+libft.h
 memset---------------------OK-----NT
 bzero----------------------OK-----NT
 memcpy---------------------OK-----NT
@@ -29,7 +30,7 @@ strdup---------------------OK-----NT
 
 Partie 2
 
-substr
+substr---------------------OK-----NT
 strjoin
 strtrim
 split

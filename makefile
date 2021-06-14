@@ -7,20 +7,26 @@ isalpha\
 isascii\
 isdigit\
 isprint\
+itoa\
 memccpy\
 memchr\
 memcmp\
 memcpy\
 memmove\
 memset\
+split\
 strchr\
 strdup\
+strjoin\
 strlcat\
 strlcpy\
 strlen\
+strmapi\
 strncmp\
 strnstr\
 strrchr\
+strtrim\
+substr\
 tolower\
 toupper\))\
 OBJ_NAME = $(SRC_NAME:.c=.o)

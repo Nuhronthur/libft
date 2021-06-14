@@ -11,3 +11,12 @@
 /* ************************************************************************** */
 
 char	*ft_strjoin(char const *s1, char const *s2)
+{
+    size_t  i;
+    size_t  j;
+    size_t  k;
+
+    i = ft_strlen(s1);
+    j = ft_strlen(s2);
+    k = i + j;
+}
