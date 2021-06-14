@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <libft.h>
+
 char	*ft_strnstr(const char *scr, const char *tar, size_t l)
 {
 	int	i;
