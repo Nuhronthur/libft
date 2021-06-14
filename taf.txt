@@ -31,7 +31,7 @@ strdup---------------------OK-----NT
 Partie 2
 
 substr---------------------OK-----NT
-strjoin
+strjoin--------------------OK-----NT
 strtrim
 split
 itoa
