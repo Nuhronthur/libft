@@ -32,9 +32,9 @@ Partie 2
 
 substr---------------------OK-----NT
 strjoin--------------------OK-----NT
-strtrim
+strtrim--------------------OK-----NT
 split
-itoa
+itoa-----------
 strmapi
 putchar_fd
 putstr_fd

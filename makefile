@@ -15,6 +15,8 @@ SRC_NAME = $(addprefix ft_,$(addsuffix .c,\
 atoi\
 bzero\
 calloc\
+intisn\
+intl\
 isalpha\
 isascii\
 isdigit\
