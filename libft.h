@@ -42,6 +42,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlcat(char *dst, const char *src, size_t l);
 size_t	ft_strlcpy(char *dst, const char *src, size_t t);
 int	ft_strlen(const char *s);
+char    *ft_strmapi(char const *s,  char (*f)(unsigned int, char));
 int	ft_strncmp(const char *f, const char *s, unsigned int l);
 char	*ft_strnstr(const char *scr, const char *tar, size_t l);
 char	*ft_strrchr(const char *s, int c);

@@ -36,6 +36,7 @@ strlcat\
 strlcpy\
 strlen\
 strmapi\
+strmapi\
 strncmp\
 strnstr\
 strrchr\
