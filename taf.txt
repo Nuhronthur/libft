@@ -34,7 +34,7 @@ substr---------------------OK-----NT
 strjoin--------------------OK-----NT
 strtrim--------------------OK-----NT
 split
-itoa-----------
+itoa-----------------------OK-----NT
 strmapi
 putchar_fd
 putstr_fd

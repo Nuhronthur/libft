@@ -12,10 +12,31 @@
 
 #include <libft.h>
 
-char    *ft_itoa(int n)
+char    *ft_itoa(int c)
 {
     size_t  i;
+    char    *r;
+    long int n;
 
-    i = 0;
-    if (n < 0)
+    n = c;
+    i = ft_intl(n);
+    if (ft_intisn(n))
+        i++;
+    r = ((char *) ft_calloc((i + 1), sizeof(*r));
+    if (r == NULL)
+        return (NULL);
+    if (fr_intisn(n))
+    {
+        r[0] = '-';
+        n *= -1;
+    }
+    if (n == 0)
+        r[i - 1] = '0';
+    while (n > 0)
+    {
+        r[i] = n % 10 + '0';
+        n /= 10;
+        i--;
+    }
+    return [r];
 }
