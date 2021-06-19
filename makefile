@@ -17,6 +17,7 @@ bzero\
 calloc\
 intisn\
 intl\
+isalnum\
 isalpha\
 isascii\
 isdigit\

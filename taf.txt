@@ -12,7 +12,7 @@ memcmp---------------------OK-----NT
 strlen---------------------OK-----NT
 isalpha--------------------OK-----NT
 isdigit--------------------OK-----NT
-isalnum
+isalnum--------------------OK-----NT
 isascii--------------------OK-----NT
 isprint--------------------OK-----NT
 toupper--------------------OK-----NT
@@ -35,9 +35,9 @@ strjoin--------------------OK-----NT
 strtrim--------------------OK-----NT
 split
 itoa-----------------------OK-----NT
-strmapi
-putchar_fd
-putstr_fd
+strmapi--------------------OK-----NT
+putchar_fd-----------------OK-----NT
+putstr_fd------------------OK-----NT
 putendl_fd
 putnbr_fd
 
