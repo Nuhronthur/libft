@@ -13,3 +13,15 @@
 #include <libft.h>
 
 char **ft_split(char const *s, char c)
+{
+    char    **dst;
+    int     l;
+
+    if (s == NULL)
+        return (NULL);
+    l = ft_hmstr(s, c);
+    dst = (char **)malloc(sizeof(char *) * (l + 1));
+    if (dst == NULL)
+        return (NULL);
+    return (ft_affect(s, dst, c, l));
+}

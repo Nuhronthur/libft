@@ -38,6 +38,6 @@ itoa-----------------------OK-----NT
 strmapi--------------------OK-----NT
 putchar_fd-----------------OK-----NT
 putstr_fd------------------OK-----NT
-putendl_fd
-putnbr_fd
+putendl_fd-----------------OK-----NT
+putnbr_fd------------------OK-----NT
 

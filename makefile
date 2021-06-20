@@ -12,9 +12,12 @@
 
 NAME = libft.a
 SRC_NAME = $(addprefix ft_,$(addsuffix .c,\
+affect\
 atoi\
 bzero\
 calloc\
+freedom\
+hmstr\
 intisn\
 intl\
 isalnum\
@@ -29,6 +32,11 @@ memcmp\
 memcpy\
 memmove\
 memset\
+putchar_fd\
+putendl_fd\
+putnbr_fd\
+putstr_fd\
+split\
 split\
 strchr\
 strdup\
