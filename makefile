@@ -6,74 +6,44 @@
 #    By: jovella <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/14 13:01:03 by jovella           #+#    #+#              #
-#    Updated: 2021/06/21 15:29:02 by jovella          ###   ########.fr        #
+#    Updated: 2021/06/21 16:27:53 by jovella          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-SRC_NAME = $(addprefix ft_,$(addsuffix .c,\
-affect\
-atoi\
-bzero\
-calloc\
-freedom\
-hmstr\
-intisn\
-intl\
-isalnum\
-isalpha\
-isascii\
-isdigit\
-isprint\
-itoa\
-memccpy\
-memchr\
-memcmp\
-memcpy\
-memmove\
-memset\
-putchar_fd\
-putendl_fd\
-putnbr_fd\
-putstr_fd\
-split\
-split\
-strchr\
-strdup\
-strjoin\
-strlcat\
-strlcpy\
-strlen\
-strmapi\
-strmapi\
-strncmp\
-strnstr\
-strrchr\
-strtrim\
-substr\
-tolower\
-toupper\))\
-OBJ = $(SRC_NAME:.c=.o)
-CC = gcc -Wall -Wextra -Werror
+
+SRC = ft_affect.c ft_atoi.c ft_bzero.c ft_calloc.c ft_freedom.c ft_hmstr.c ft_intisn.c ft_intl.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_split.c ft_split.c ft_strchr.c ft_strdup.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c\ 
+
+OBJ =$(SRC:.c=.o)
+
+CC = gcc
+
+FLAGS = -Wall -Wextra -Werror
+
+.c.o:
+	$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
 
 all: $(NAME)
+
 $(NAME): $(OBJ)
-	@echo "Creation of $(NAME)...\n"
-	@ar rc $(NAME) $(OBJ)
-	@ranlib $(NAME)
-	@echo "$(NAME) created\n"
-	@make clean
-$(OBJ_NAME)%.o: %.c
-	@$(CC) -o $@ -c $<
+	echo "Creation of $(NAME)...\n"
+	ar -rc $(NAME) $(OBJ)
+	ranlib $(NAME)
+	echo "$(NAME) created\n"
+
 clean:
-	@echo "Removal of .o files of $(NAME)..."
-	@rmdir $(OBJ) 2> /dev/null || true
-	@echo "Files .o deleted\n"
+	echo "Removal of .o files of $(NAME)..."
+	rm -f *.o
+	echo "Files .o deleted\n"
+
 fclean: clean
-	@echo "Removal of $(NAME)"
-	@rm -f $(NAME)
-	@echo "Binary $(NAME) deleted\n"
+	echo "Removal of $(NAME)"
+	rm -f $(NAME)
+	echo "Binary $(NAME) deleted\n"
+
 re: fclean all
+
 .PHONY: all, clean, fclean, re
+
 norme:
-	@norminette $(OBJ)
+	norminette $(OBJ)
