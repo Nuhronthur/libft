@@ -6,11 +6,11 @@
 /*   By: jovella <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 12:37:22 by jovella           #+#    #+#             */
-/*   Updated: 2021/06/10 16:05:30 by jovella          ###   ########.fr       */
+/*   Updated: 2021/06/21 13:12:46 by jovella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	*calloc(size_t l, size_t s)
 {
@@ -22,7 +22,7 @@ void	*calloc(size_t l, size_t s)
 		s = 1;
 	}
 	t = malloc(l * s);
-		if (t == NULL)
+	if (t == NULL)
 		return (NULL);
 	ft_bzero(t, l * s);
 	return ((void *)t);

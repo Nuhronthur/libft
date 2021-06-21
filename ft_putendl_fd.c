@@ -1,8 +1,22 @@
-void    ft_putendl_fd(char *s, int fd)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jovella <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/06/21 13:01:15 by jovella           #+#    #+#             */
+/*   Updated: 2021/06/21 14:31:15 by jovella          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	ft_putendl_fd(char *s, int fd)
 {
-    if (s == NULL)
-        return;
-    while (*s)
-        write(fd, s++, 1);
-    write(fd,'\0', 1);
+	if (s == NULL)
+		return ;
+	while (*s)
+		write(fd, s++, 1);
+	write (fd, '\0', 1);
 }

@@ -1,8 +1,20 @@
-#include <libft.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jovella <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/06/21 13:18:46 by jovella           #+#    #+#             */
+/*   Updated: 2021/06/21 14:17:38 by jovella          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int     ft_isalnum(int c)
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
-    if(ft_isalpha || ft_isdigit)
-        return (1);
-    return (0);
+	if (ft_isalpha || ft_isdigit)
+		return (1);
+	return (0);
 }

@@ -6,7 +6,7 @@
 #    By: jovella <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/14 13:01:03 by jovella           #+#    #+#              #
-#    Updated: 2021/06/14 13:01:07 by jovella          ###   ########.fr        #
+#    Updated: 2021/06/21 15:29:02 by jovella          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,13 +53,13 @@ strtrim\
 substr\
 tolower\
 toupper\))\
-OBJ_NAME = $(SRC_NAME:.c=.o)
+OBJ = $(SRC_NAME:.c=.o)
 CC = gcc -Wall -Wextra -Werror
 
 all: $(NAME)
-$(NAME): $(OBJ_NAME)
+$(NAME): $(OBJ)
 	@echo "Creation of $(NAME)...\n"
-	@ar rc $(NAME) $(OBJ_NAME)
+	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@echo "$(NAME) created\n"
 	@make clean
@@ -67,7 +67,7 @@ $(OBJ_NAME)%.o: %.c
 	@$(CC) -o $@ -c $<
 clean:
 	@echo "Removal of .o files of $(NAME)..."
-	@rmdir $(OBJ_NAME) 2> /dev/null || true
+	@rmdir $(OBJ) 2> /dev/null || true
 	@echo "Files .o deleted\n"
 fclean: clean
 	@echo "Removal of $(NAME)"
@@ -76,4 +76,4 @@ fclean: clean
 re: fclean all
 .PHONY: all, clean, fclean, re
 norme:
-	@norminette $(OBJ_NAME)
+	@norminette $(OBJ)

@@ -6,11 +6,11 @@
 /*   By: jovella <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/26 10:53:52 by jovella           #+#    #+#             */
-/*   Updated: 2021/03/26 11:42:07 by jovella          ###   ########.fr       */
+/*   Updated: 2021/06/21 14:06:49 by jovella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_atoi(const char *s)
 {

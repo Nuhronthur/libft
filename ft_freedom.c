@@ -1,12 +1,24 @@
-#include <libft.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_freedom.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jovella <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/06/21 13:12:59 by jovella           #+#    #+#             */
+/*   Updated: 2021/06/21 14:24:20 by jovella          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-static char     **ft_freedom(char const **dst, int j)
+#include "libft.h"
+
+static char	**ft_freedom(char const **dst, int j)
 {
-    while (j > 0)
-    {
-        j--;
-        free((void *)dst[j])
-    }
-    free(dst);
-    return (NULL);
+	while (j > 0)
+	{
+		j--;
+		free((void *)dst[j]);
+	}
+	free (dst);
+	return (NULL);
 }

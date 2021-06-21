@@ -1,14 +1,26 @@
-#include <libft.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_numchar.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jovella <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/06/21 13:56:44 by jovella           #+#    #+#             */
+/*   Updated: 2021/06/21 13:57:30 by jovella          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-static int  ft_numchar(char const *s1, char c, int i)
+#include "libft.h"
+
+static int	ft_numchar(char const *s1, char c, int i)
 {
-    int l;
+	int	l;
 
-    l =0;
-    while (s1[i] != c && s1[i] != '\0')
-    {
-        l++;
-        i++;
-    }
-    return (l);
+	l = 0;
+	while (s1[i] != c && s1[i] != '\0')
+	{
+		l++;
+		i++;
+	}
+	return (l);
 }
