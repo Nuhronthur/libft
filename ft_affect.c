@@ -6,13 +6,13 @@
 /*   By: jovella <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 13:10:47 by jovella           #+#    #+#             */
-/*   Updated: 2021/06/21 16:45:50 by jovella          ###   ########.fr       */
+/*   Updated: 2021/06/22 14:08:54 by jovella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	**affect(char const *s1, char **dst, char c, int l)
+char	**ft_affect(char const *s1, char **dst, char c, int l)
 {
 	int		i;
 	int		j;

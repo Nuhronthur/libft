@@ -6,7 +6,7 @@
 /*   By: jovella <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 13:14:00 by jovella           #+#    #+#             */
-/*   Updated: 2021/06/21 14:07:43 by jovella          ###   ########.fr       */
+/*   Updated: 2021/06/22 14:22:10 by jovella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ static int	ft_hmstr(char const *s1, char c)
 {
 	int		i;
 	int		j;
-
+	
+	i = 0;
 	if (*s1 == '\0')
 		return (0);
 	while (*s1 != '\0')

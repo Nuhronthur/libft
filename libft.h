@@ -6,7 +6,7 @@
 /*   By: jovella <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 13:01:12 by jovella           #+#    #+#             */
-/*   Updated: 2021/06/21 18:24:24 by jovella          ###   ########.fr       */
+/*   Updated: 2021/06/22 14:18:25 by jovella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
-static char		**affect(char const *s1, char **dst, char c, int l);
+char			**ft_affect(char const *s1, char **dst, char c, int l);
 int				ft_atoi(const char *s);
 void			ft_bzero(void *s, size_t n);
 void			*calloc(size_t l, size_t s);
