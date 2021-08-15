@@ -14,16 +14,21 @@
 
 char	*strdup(const char *s)
 {
-	size_t	i;
+	int		i;
+	int		j;
 	char	*dest;
 
-	i = ft_strlen(s);
-	dest = (char *)ft_calloc((i + 1), sizeof(*dest));
-	if (!s)
+	dest = malloc((sizeof(char))*(ft_strlen(s) + 1));
+	if (!dest)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s[i] != '\0')
 	{
-		errno = ENOMEM;
-		return ((char *)0);
+		dest[j] = s[i];
+		i++;
+		j++;
 	}
-	(ft_memcpy(dest, s, i));
+	dest[j] = '\0';
 	return (dest);
 }
