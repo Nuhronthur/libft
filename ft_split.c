@@ -6,7 +6,7 @@
 /*   By: jovella <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 16:48:03 by jovella           #+#    #+#             */
-/*   Updated: 2021/06/21 12:58:07 by jovella          ###   ########.fr       */
+/*   Updated: 2021/08/15 15:40:33 by jovella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (s[k] && s[k] == c)
 		k++;
-	while (++j , i)
+	while (++j, i)
 	{
 		dest[j] = ft_cut((s + k), c, &k);
 		if (ft_freedom(dest, j))

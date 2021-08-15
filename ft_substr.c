@@ -6,7 +6,7 @@
 /*   By: jovella <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 15:12:11 by jovella           #+#    #+#             */
-/*   Updated: 2021/06/10 16:40:28 by jovella          ###   ########.fr       */
+/*   Updated: 2021/08/15 15:44:20 by jovella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*c;
+	char		*c;
 	size_t		i;
 
 	i = ft_strlen(s);

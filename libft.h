@@ -6,11 +6,7 @@
 /*   By: jovella <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 13:01:12 by jovella           #+#    #+#             */
-<<<<<<< HEAD
 /*   Updated: 2021/06/22 14:18:25 by jovella          ###   ########.fr       */
-=======
-/*   Updated: 2021/06/21 15:04:39 by jovella          ###   ########.fr       */
->>>>>>> e51858a3cebfb912c86aa26a6280c00ef2365070
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +22,7 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
-<<<<<<< HEAD
 char			**ft_affect(char const *s1, char **dst, char c, int l);
-=======
-static char		**ft_affect(char const *s1, char **dst, char c, int l);
->>>>>>> e51858a3cebfb912c86aa26a6280c00ef2365070
 int				ft_atoi(const char *s);
 void			ft_bzero(void *s, size_t n);
 void			*ft_calloc(size_t l, size_t s);

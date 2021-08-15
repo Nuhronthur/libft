@@ -23,8 +23,5 @@ void	ft_bzero(void *s, size_t n)
 		str++;
 		n--;
 	}
-<<<<<<< HEAD
 	return ;
-=======
->>>>>>> e51858a3cebfb912c86aa26a6280c00ef2365070
 }

@@ -6,7 +6,7 @@
 /*   By: jovella <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 12:52:39 by jovella           #+#    #+#             */
-/*   Updated: 2021/06/10 12:54:51 by jovella          ###   ########.fr       */
+/*   Updated: 2021/08/15 15:43:43 by jovella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strnstr(const char *scr, const char *tar, size_t l)
 	while (scr[i] && (i + j) <= l)
 	{
 		if (ft_strncmp((scr + i), tar, j) == 0)
-			return ((char *)(scr +i));
+			return ((char *)(scr + i));
 		i++;
 	}
 	return ((char *)0);
