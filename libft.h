@@ -6,7 +6,11 @@
 /*   By: jovella <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 13:01:12 by jovella           #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2021/06/22 14:18:25 by jovella          ###   ########.fr       */
+=======
+/*   Updated: 2021/06/21 15:04:39 by jovella          ###   ########.fr       */
+>>>>>>> e51858a3cebfb912c86aa26a6280c00ef2365070
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +26,17 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+<<<<<<< HEAD
 char			**ft_affect(char const *s1, char **dst, char c, int l);
+=======
+static char		**ft_affect(char const *s1, char **dst, char c, int l);
+>>>>>>> e51858a3cebfb912c86aa26a6280c00ef2365070
 int				ft_atoi(const char *s);
 void			ft_bzero(void *s, size_t n);
-void			*calloc(size_t l, size_t s);
-char			**ft_freedom(char const **dst, int j);
+void			*ft_calloc(size_t l, size_t s);
+static char		*ft_cut(char const *s, char c, int *j);
+static int		ft_freedom(char **t, int j);
+int				ft_ischarset(int c, char const *cs);
 int				ft_intisn(int n);
 size_t			ft_intl(int c);
 int				ft_isalnum(int c);
@@ -41,7 +51,7 @@ int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memcpy(void *dest, const void *src, size_t l);
 void			*ft_memmove(void *dest, const void *src, size_t n);
 void			*ft_memset(void *s, int c, size_t n);
-int				ft_numchar(char const *s1, char c, int i);
+static int		ft_numchar(char const *s1, char c, int i);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
@@ -49,6 +59,7 @@ void			ft_putstr_fd(char *s, int fd);
 char			**ft_split(char const *s, char c);
 char			*ft_strchr(const char *s, int c);
 char			*strdup(const char *s);
+void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 char			*ft_strjoin(char const *s1, char const *s2);
 size_t			ft_strlcat(char *dst, const char *src, size_t l);
 size_t			ft_strlcpy(char *dst, const char *src, size_t t);
@@ -61,4 +72,5 @@ char			*ft_strtrim(char const *s1, char const *set);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 int				ft_tolower(char c);
 int				ft_toupper(char c);
+int				ft_wc(char *str, int c);
 #endif

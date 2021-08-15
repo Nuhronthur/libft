@@ -6,19 +6,20 @@
 /*   By: jovella <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 13:12:59 by jovella           #+#    #+#             */
-/*   Updated: 2021/06/21 18:17:41 by jovella          ###   ########.fr       */
+/*   Updated: 2021/06/21 14:24:20 by jovella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_freedom(char const **dst, int j)
+static int	ft_freedom(char **t, int i)
 {
-	while (j > 0)
+	if (!t[i])
 	{
-		j--;
-		free((void *)dst[j]);
+		while (--i >= 0)
+			free(t[i]);
+		free(t);
+		return (1);
 	}
-	free (dst);
-	return (NULL);
+	return (0);
 }

@@ -6,13 +6,13 @@
 /*   By: jovella <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 13:56:44 by jovella           #+#    #+#             */
-/*   Updated: 2021/06/21 18:23:31 by jovella          ###   ########.fr       */
+/*   Updated: 2021/06/21 13:57:30 by jovella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_numchar(char const *s1, char c, int i)
+static int	ft_numchar(char const *s1, char c, int i)
 {
 	int	l;
 
