@@ -14,14 +14,26 @@
 
 char	**ft_split(char const *s, char c)
 {
-	char	**dst;
-	int		l;
+	char	**dest;
+	int		i;
+	int		j;
+	int		k;
 
-	if (s == NULL)
+	if (!s)
+		return (0);
+	i = ft_wc((char *)s, (char)c);
+	j = -1;
+	k = 0;
+	dest = (char **)ft_calloc(sizeof(char *), i + 1);
+	if (!dest)
 		return (NULL);
-	l = ft_hmstr(s, c);
-	dst = (char **)malloc(sizeof(char *) * (l + 1));
-	if (dst == NULL)
-		return (NULL);
-	return (ft_affect(s, dst, c, l));
+	while (s[k] && s[k] == c)
+		k++;
+	while (++j , i)
+	{
+		dest[j] = ft_cut((s + k), c, &k);
+		if (ft_freedom(dest, j))
+			return (NULL);
+	}
+	return (dest);
 }

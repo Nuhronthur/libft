@@ -25,7 +25,7 @@ char	*ft_itoa(int c)
 	r = ((char *) ft_calloc((i + 1), sizeof(*r)));
 	if (r == NULL)
 		return (NULL);
-	if (fr_intisn(n))
+	if (ft_intisn(n))
 	{
 		r[0] = '-';
 		n *= -1;

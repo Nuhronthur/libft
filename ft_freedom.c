@@ -12,13 +12,14 @@
 
 #include "libft.h"
 
-static char	**ft_freedom(char const **dst, int j)
+static int	ft_freedom(char **t, int i)
 {
-	while (j > 0)
+	if (!t[i])
 	{
-		j--;
-		free((void *)dst[j]);
+		while (--i >= 0)
+			free(t[i]);
+		free(t);
+		return (1);
 	}
-	free (dst);
-	return (NULL);
+	return (0);
 }

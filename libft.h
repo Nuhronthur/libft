@@ -22,11 +22,13 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
-static char		**affect(char const *s1, char **dst, char c, int l);
+static char		**ft_affect(char const *s1, char **dst, char c, int l);
 int				ft_atoi(const char *s);
 void			ft_bzero(void *s, size_t n);
-void			*calloc(size_t l, size_t s);
-static char		**ft_freedom(char const **dst, int j);
+void			*ft_calloc(size_t l, size_t s);
+static char		*ft_cut(char const *s, char c, int *j);
+static int		ft_freedom(char **t, int j);
+int				ft_ischarset(int c, char const *cs);
 int				ft_intisn(int n);
 size_t			ft_intl(int c);
 int				ft_isalnum(int c);
@@ -61,4 +63,5 @@ char			*ft_strtrim(char const *s1, char const *set);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 int				ft_tolower(char c);
 int				ft_toupper(char c);
+int				ft_wc(char *str, int c);
 #endif

@@ -15,15 +15,15 @@
 char	*strdup(const char *s)
 {
 	size_t	i;
-	char	*c;
+	char	*dest;
 
 	i = ft_strlen(s);
-	c = (char *)ft_calloc((c + 1), sizeof(*s));
+	dest = (char *)ft_calloc((i + 1), sizeof(*dest));
 	if (!s)
 	{
 		errno = ENOMEM;
 		return ((char *)0);
 	}
-	(ft_memcpy(c, s, i))
-	return (c);
+	(ft_memcpy(dest, s, i));
+	return (dest);
 }
