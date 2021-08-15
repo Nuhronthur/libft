@@ -6,18 +6,15 @@
 #    By: jovella <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/14 13:01:03 by jovella           #+#    #+#              #
-#    Updated: 2021/06/21 16:27:53 by jovella          ###   ########.fr        #
+#    Updated: 2021/08/15 18:34:51 by jovella          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME 	= libft.a
 
-SRC = ft_atoi.c\
+SRCS 	= ft_atoi.c\
   		ft_bzero.c\
    		ft_calloc.c\
-		ft_cut.c\.c.o
-    	ft_freedom.c\
-		ft_hmstr.c\
 		ft_intisn.c\
 		ft_intl.c\
 		ft_isalnum.c\
@@ -32,7 +29,6 @@ SRC = ft_atoi.c\
 		ft_memcpy.c\
 		ft_memmove.c\
 		ft_memset.c\
-		ft_numchar.c\
 		ft_putchar_fd.c\
 		ft_putendl_fd.c\
 		ft_putnbr_fd.c\
@@ -53,37 +49,25 @@ SRC = ft_atoi.c\
 		ft_substr.c\
 		ft_tolower.c\
 		ft_toupper.c\
-		ft_wc.c\
-OBJ =$(SRC:.c=.o)
+		ft_wc.c
 
-CC = gcc
+OBJS	= ${SRCS:.c=.o}
 
-FLAGS = -Wall -Wextra -Werror
+GCC		= gcc
+RM		= rm -f
+FLAGS	= -Wall -Werror -Wextra
 
-.c.o:
-	$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
+$(NAME):	${OBJS}
+				ar rc ${NAME} ${OBJS}
 
-all: $(NAME)
-
-$(NAME): $(OBJ)
-	echo "Creation of $(NAME)...\n"
-	ar -rc $(NAME) $(OBJ)
-	ranlib $(NAME)
-	echo "$(NAME) created\n"
+all:		${NAME}
 
 clean:
-	echo "Removal of .o files of $(NAME)..."
-	rm -f *.o
-	echo "Files .o deleted\n"
+			${RM} ${OBJS}
 
-fclean: clean
-	echo "Removal of $(NAME)"
-	rm -f $(NAME)
-	echo "Binary $(NAME) deleted\n"
+fclean:		clean
+				${RM} ${NAME}
 
-re: fclean all
+re:				fclean all
 
-.PHONY: all, clean, fclean, re
-
-norme:
-	norminette $(OBJ)
+.PHONY:		all clean fclean re

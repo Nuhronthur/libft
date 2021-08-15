@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	*calloc(size_t l, size_t s)
+void	*ft_calloc(size_t l, size_t s)
 {
 	unsigned char	*t;
 
