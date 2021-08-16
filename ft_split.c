@@ -44,24 +44,24 @@ static int	ft_freedom(char **t, int i)
 char	**ft_split(char const *s, char c)
 {
 	char	**dest;
+	int		nb;
 	int		i;
 	int		j;
-	int		k;
 
 	if (!s)
 		return (0);
-	i = ft_wc((char *)s, (char)c);
-	j = -1;
-	k = 0;
-	dest = (char **)ft_calloc(sizeof(char *), i + 1);
+	i = -1;
+	j = 0;
+	nb = ft_wc((char *)s, (char)c);
+	dest = (char **)ft_calloc(sizeof(char *), nb + 1);
 	if (!dest)
 		return (NULL);
-	while (s[k] && s[k] == c)
-		k++;
-	while (++j, i)
+	while (s[j] && s[j] == c)
+		j++;
+	while (++i < nb)
 	{
-		dest[j] = ft_cut((s + k), c, &k);
-		if (ft_freedom(dest, j))
+		dest[i] = ft_cut((s + j), c, &j);
+		if (ft_freedom(dest, i))
 			return (NULL);
 	}
 	return (dest);
