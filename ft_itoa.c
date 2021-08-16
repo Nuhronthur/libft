@@ -50,25 +50,25 @@ static char	*ft_oui(long int nb, char *str, int i)
 	return (str);
 }
 
-char	*ft_itoa(int c)
+char	*ft_itoa(int n)
 {
 	int			i;
 	char		*str;
 	long int	j;
 
-	if (c == -2147483648)
+	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	i = ft_put(c);
+	i = ft_put(n);
 	str = (malloc(sizeof(char) * (i + 1)));
 	if (!str)
 		return (NULL);
-	if (c == 0)
+	if (n == 0)
 	{
 		str[0] = 48;
 		str [1] = '\0';
 		return (str);
 	}
-	j = c ;
+	j = n ;
 	str = ft_oui(j, str, i);
 	return (str);
 }

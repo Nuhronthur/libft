@@ -12,18 +12,18 @@
 
 #include "libft.h"
 
-void	*ft_calloc(size_t l, size_t s)
+void	*ft_calloc(size_t count, size_t size)
 {
 	unsigned char	*t;
 
-	if (!l || !s)
+	if (!count || !size)
 	{
-		l = 1;
-		s = 1;
+		count = 1;
+		size = 1;
 	}
-	t = malloc(l * s);
+	t = malloc(count * size);
 	if (t == NULL)
 		return (NULL);
-	ft_bzero(t, l * s);
+	ft_bzero(t, count * size);
 	return ((void *)t);
 }
