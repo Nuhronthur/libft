@@ -6,37 +6,69 @@
 /*   By: jovella <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/14 12:38:40 by jovella           #+#    #+#             */
-/*   Updated: 2021/06/21 14:30:42 by jovella          ###   ########.fr       */
+/*   Updated: 2021/08/16 14:03:21 by jovella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int c)
+static int	ft_put(int n)
 {
-	size_t		i;
-	char		*r;
-	long int	n;
+	int	l;
 
-	n = c;
-	i = ft_intl(n);
-	if (ft_intisn(n))
-		i++;
-	r = ((char *) ft_calloc((i + 1), sizeof(*r)));
-	if (r == NULL)
-		return (NULL);
-	if (ft_intisn(n))
-	{
-		r[0] = '-';
-		n *= -1;
-	}
+	l = 0;
 	if (n == 0)
-		r[i - 1] = '0';
+		return (1);
+	if (n < 0)
+	{
+		n = n * -1;
+		l++;
+	}
 	while (n > 0)
 	{
-		r[i] = n % 10 + '0';
-		n /= 10;
+		n = n / 10;
+		l++;
+	}
+	return (l);
+}
+
+static char	*ft_oui(long int nb, char *str, int i)
+{
+	if (nb < 0)
+	{
+		str[0] = '-';
+		nb *= -1;
+	}
+	str[i] = '\0';
+	i--;
+	while (nb > 0)
+	{
+		str[i] = 48 + (nb % 10);
+		nb = nb / 10;
 		i--;
 	}
-	return (r);
+	return (str);
+}
+
+char	*ft_itoa(int c)
+{
+	int			i;
+	char		*str;
+	long int	j;
+
+	if (c == -2147483648)
+		return (ft_strdup("-2147483648"));
+	i = ft_put(c);
+	str = (malloc(sizeof(char) * (i + 1)));
+	if (!str)
+		return (NULL);
+	if (c == 0)
+	{
+		str[0] = 48;
+		str [1] = '\0';
+		return (str);
+	}
+	j = c ;
+	str = ft_oui(j, str, i);
+	return (str);
 }

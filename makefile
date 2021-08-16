@@ -57,6 +57,9 @@ GCC		= gcc
 RM		= rm -f
 FLAGS	= -Wall -Werror -Wextra
 
+.c.o:
+	$(GCC) $(FLAGS) -c $< -o $(<:.c=.o)
+
 $(NAME):	${OBJS}
 				ar rc ${NAME} ${OBJS}
 
