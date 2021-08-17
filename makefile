@@ -1,7 +1,7 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: jovella <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
@@ -15,12 +15,9 @@ NAME 	= libft.a
 SRCS 	= ft_atoi.c\
   		ft_bzero.c\
    		ft_calloc.c\
-		ft_intisn.c\
-		ft_intl.c\
 		ft_isalnum.c\
 		ft_isalpha.c\
 		ft_isascii.c\
-		ft_ischarset.c\
 		ft_isdigit.c\
 		ft_isprint.c\
 		ft_itoa.c\
@@ -49,8 +46,7 @@ SRCS 	= ft_atoi.c\
 		ft_strtrim.c\
 		ft_substr.c\
 		ft_tolower.c\
-		ft_toupper.c\
-		ft_wc.c
+		ft_toupper.c
 
 OBJS	= ${SRCS:.c=.o}
 
